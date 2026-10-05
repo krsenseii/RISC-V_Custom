@@ -1,0 +1,25 @@
++====================+===================+==============================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                          |
++====================+===================+==============================================================+
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_768_1023_24_24/RAMS64E_A/ADR4 |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_768_1023_24_24/RAMS64E_B/ADR4 |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_29_29/RAMS64E_A/ADR1    |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_29_29/RAMS64E_B/ADR1    |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_512_767_24_24/RAMS64E_A/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_512_767_24_24/RAMS64E_B/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_512_767_21_21/RAMS64E_B/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_29_29/RAMS64E_C/ADR1    |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_29_29/RAMS64E_D/ADR1    |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_512_767_29_29/RAMS64E_C/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_256_511_24_24/RAMS64E_A/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_512_767_29_29/RAMS64E_D/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_256_511_24_24/RAMS64E_B/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_512_767_29_29/RAMS64E_A/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_512_767_29_29/RAMS64E_B/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_256_511_29_29/RAMS64E_A/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_256_511_29_29/RAMS64E_B/ADR4  |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_10_10/RAMS64E_B/ADR4    |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_10_10/RAMS64E_A/ADR4    |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_10_10/RAMS64E_C/ADR4    |
+| sys_clk_pin        | sys_clk_pin       | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_10_10/RAMS64E_D/ADR4    |
++--------------------+-------------------+--------------------------------------------------------------+

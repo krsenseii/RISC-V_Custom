@@ -1,0 +1,189 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Wed Jun 10 12:07:40 2026
+| Host         : DESKTOP-VRSFIRI running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_FPGA_control_sets_placed.rpt
+| Design       : Top_FPGA
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   111 |
+|    Minimum number of control sets                        |   111 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   132 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   111 |
+| >= 0 to < 4        |     9 |
+| >= 4 to < 6        |     9 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |    15 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    72 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              10 |            6 |
+| No           | No                    | Yes                    |              44 |           21 |
+| No           | Yes                   | No                     |              26 |            8 |
+| Yes          | No                    | No                     |             109 |           43 |
+| Yes          | No                    | Yes                    |             510 |          216 |
+| Yes          | Yes                   | No                     |              41 |           14 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+---------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal      |                   Enable Signal                   |                               Set/Reset Signal                              | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------+---------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_100MHz_IBUF_BUFG   | UART_use/rx_data[7]                               |                                                                             |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/rx_data[6]                               |                                                                             |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/rx_data[5]                               |                                                                             |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/rx_data[0]                               |                                                                             |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/rx_data[2]                               |                                                                             |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/rx_data[1]                               |                                                                             |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/rx_data[3]                               |                                                                             |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/rx_data[4]                               |                                                                             |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG   |                                                   | VGA_use/vga_control_use/div[0]_i_2_n_0                                      |                1 |              2 |         2.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/reg_idx[0]                 | VGA_use/DecToDigit_use/reg_step[3]_i_1_n_0                                  |                2 |              4 |         2.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/phase                      | VGA_use/DecToDigit_use/reg_step[3]_i_1_n_0                                  |                1 |              4 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/phase                      |                                                                             |                2 |              4 |         2.00 |
+|  clk_100MHz_IBUF_BUFG   | BOOTLOADER_use/byte_count[0]                      | leds_OBUF[15]                                                               |                1 |              4 |         4.00 |
+|  vga_control_use/clk_25 | VGA_use/vga_control_use/cell_x[0]                 | VGA_use/vga_control_use/div[0]_i_2_n_0                                      |                1 |              5 |         5.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/contador[0]                | VGA_use/DecToDigit_use/contador[4]_i_1_n_0                                  |                2 |              5 |         2.50 |
+|  vga_control_use/clk_25 | VGA_use/vga_control_use/cell_y[4]_i_1_n_0         | VGA_use/vga_control_use/div[0]_i_2_n_0                                      |                4 |              5 |         1.25 |
+|  vga_control_use/clk_25 | VGA_use/vga_control_use/pix_fila[4]_i_1_n_0       | VGA_use/vga_control_use/div[0]_i_2_n_0                                      |                3 |              5 |         1.67 |
+|  vga_control_use/clk_25 | VGA_use/vga_control_use/pix_col[0]                | VGA_use/vga_control_use/div[0]_i_2_n_0                                      |                2 |              5 |         2.50 |
+|  clk_100MHz_IBUF_BUFG   | BOOTLOADER_use/buffer_inst[15]_i_1_n_0            |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/E[1]                                     |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/E[0]                                     |                                                                             |                1 |              8 |         8.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[7]_2    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[8]_0    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[8]_1    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[9]_1    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[7]_1    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[8]_3    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[9]_2    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[9]_3    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[8]_2    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[8]_4    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[7]_0    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM_reg[9]_0    |                                                                             |                2 |              8 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | BOOTLOADER_use/current_addr[0]                    | leds_OBUF[15]                                                               |                3 |             10 |         3.33 |
+|  clk_100MHz_IBUF_BUFG   |                                                   |                                                                             |                6 |             10 |         1.67 |
+|  vga_control_use/clk_25 | VGA_use/vga_control_use/vc[0]                     | VGA_use/vga_control_use/div[0]_i_2_n_0                                      |                5 |             10 |         2.00 |
+|  vga_control_use/clk_25 |                                                   | VGA_use/vga_control_use/div[0]_i_2_n_0                                      |                4 |             10 |         2.50 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/clk_count[0]                             | UART_use/clk_count[13]_i_1_n_0                                              |                5 |             14 |         2.80 |
+|  clk_100MHz_IBUF_BUFG   | VGA_use/DecToDigit_use/addressTextRAM0            |                                                                             |               10 |             15 |         1.50 |
+|  clk_100MHz_IBUF_BUFG   | UART_use/data_out[7]_i_1_n_0                      |                                                                             |                5 |             16 |         3.20 |
+|  clk_100MHz_IBUF_BUFG   |                                                   | Inst_Div1Hz/tempClk1Hz                                                      |                8 |             26 |         3.25 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_640_767_0_0_i_2_3  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_640_767_0_0_i_2_0  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_5_6    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               10 |             32 |         3.20 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_3_1    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               14 |             32 |         2.29 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_4_3    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               15 |             32 |         2.13 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_4_1    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               15 |             32 |         2.13 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_5_5    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               14 |             32 |         2.29 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_5_1    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               12 |             32 |         2.67 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_5_0    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               20 |             32 |         1.60 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_4_0    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               13 |             32 |         2.46 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_5_2    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               15 |             32 |         2.13 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_4_2    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               12 |             32 |         2.67 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_5_4    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               13 |             32 |         2.46 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_3_2    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               12 |             32 |         2.67 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_24_24_i_6_0  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/temp_i_3__16_1             |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/temp_i_3__15_1             |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/temp_i_3__16_2             |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/temp_i_3__0_0              | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               11 |             32 |         2.91 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/temp_i_3__16_3             |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/temp_i_3__16_0             |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/temp_i_3__15_0             |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/temp_i_3__17_0             |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           |                                                   | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               16 |             32 |         2.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_127_0_0_i_9_1    |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_127_0_0_i_9_4    |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_3_0    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               15 |             32 |         2.13 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_127_0_0_i_9_0    |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_127_0_0_i_9_5    |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_0_0_i_14_1   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_127_0_0_i_9_3    |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_0_0_i_14_2   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_0_0_i_14_0   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_0_0_i_13_0   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_127_0_0_i_9_2    |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_0_0_i_14_4   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_0_0_i_14_3   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_24_24_i_6_2  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_24_24_i_6_5  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_8_8_i_10_0   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_24_24_i_6_3  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_24_24_i_6_4  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_24_24_i_6_6  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_24_24_i_6_1  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_384_511_0_0_i_2_1  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_8_8_i_10_2   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_384_511_0_0_i_2_4  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_384_511_0_0_i_2_7  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_8_8_i_10_3   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_8_8_i_10_4   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/REGS_reg_0_15_0_5_i_5_3    | Inst_CPU/Inst_BancoReg/ciclo_regs[15].R32_n.bank/registro[31].FF_D_use/sw15 |               10 |             32 |         3.20 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_0_255_8_8_i_10_1   |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_384_511_0_0_i_2_2  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_384_511_0_0_i_2_3  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_384_511_0_0_i_2_5  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_384_511_0_0_i_2_0  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_384_511_0_0_i_2_6  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_768_1023_0_0_i_2_4 |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_640_767_0_0_i_2_1  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_768_1023_0_0_i_2_2 |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_768_1023_0_0_i_2_1 |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_640_767_0_0_i_2_2  |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_768_1023_0_0_i_2_3 |                                                                             |                8 |             32 |         4.00 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/RAM_reg_768_1023_0_0_i_2_0 |                                                                             |                8 |             32 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | BOOTLOADER_use/ram_addr[9]_i_1_n_0                |                                                                             |               13 |             42 |         3.23 |
+|  clk_cpu_BUFG           | Inst_CPU/Inst_MemInstr/p_0_in                     |                                                                             |                6 |             44 |         7.33 |
+|  clk_100MHz_IBUF_BUFG   | BOOTLOADER_use/ram_addr_reg[8]_0                  |                                                                             |               32 |            128 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | BOOTLOADER_use/ram_we_reg_0                       |                                                                             |               32 |            128 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | BOOTLOADER_use/ram_addr_reg[9]_0                  |                                                                             |               32 |            128 |         4.00 |
+|  clk_100MHz_IBUF_BUFG   | BOOTLOADER_use/ram_we_reg_1                       |                                                                             |               32 |            128 |         4.00 |
++-------------------------+---------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

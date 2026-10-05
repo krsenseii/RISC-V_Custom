@@ -1,0 +1,644 @@
+
+*** Running vivado
+    with args -log Top_FPGA.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_FPGA.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Jun 10 12:00:23 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source Top_FPGA.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 526.332 ; gain = 221.324
+Command: read_checkpoint -auto_incremental -incremental C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/utils_1/imports/synth_1/testImmGen.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/utils_1/imports/synth_1/testImmGen.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Top_FPGA -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3304
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1259.887 ; gain = 542.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Top_FPGA' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/TOP_FPGA.vhd:26]
+INFO: [Synth 8-638] synthesizing module 'div1hz' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Clock.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'div1hz' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Clock.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'Procesador_RV32E' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Procesador_RV32E.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'CP' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/CP.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'R32' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/R32.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'FF_D' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/FF_D.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'FF_D' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/FF_D.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'R32' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/R32.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'Sum1CP' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Sum1CP.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'Sum1CP' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Sum1CP.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'SumPCOffset' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/SumPCOffset.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'SumPCOffset' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/SumPCOffset.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'rs1SumOffset' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/rs1SumOffset.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'rs1SumOffset' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/rs1SumOffset.vhd:13]
+INFO: [Synth 8-638] synthesizing module 'MUX2' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/MUXn.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'MUX2' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/MUXn.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'CP' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/CP.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'MemInstr' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/MemInstr.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'MemInstr' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/MemInstr.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'PreDecode' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/PreDecode.vhd:45]
+INFO: [Synth 8-226] default block is never used [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/PreDecode.vhd:72]
+INFO: [Synth 8-226] default block is never used [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/PreDecode.vhd:105]
+INFO: [Synth 8-256] done synthesizing module 'PreDecode' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/PreDecode.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'ControlUnit' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/ControlUnit.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'ControlUnit' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/ControlUnit.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'ImmGen' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/ImmGen.vhd:33]
+WARNING: [Synth 8-614] signal 'tipoIEspecial' is read in the process but is not in the sensitivity list [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/ImmGen.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'ImmGen' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/ImmGen.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'Bank_R32' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Bank_R32.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'Decoder4_16' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Decoder4_16.vhd:12]
+INFO: [Synth 8-226] default block is never used [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Decoder4_16.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Decoder4_16' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Decoder4_16.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'Bank_R32' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Bank_R32.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'ALU32' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/ALU32.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'Arith_Unit' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Arith_Unit.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Arith_Unit' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Arith_Unit.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'Logic_Unit' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Logic_Unit.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'Logic_Unit' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Logic_Unit.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'Shift_Unit' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Shift_Unit.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Shift_Unit' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Shift_Unit.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'Comp_Unit' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Comp_Unit.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'Comp_Unit' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Comp_Unit.vhd:33]
+INFO: [Synth 8-226] default block is never used [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/ALU32.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'ALU32' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/ALU32.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'LoadStoreUnit' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/LoadStoreUnit.vhd:40]
+INFO: [Synth 8-226] default block is never used [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/LoadStoreUnit.vhd:55]
+INFO: [Synth 8-226] default block is never used [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/LoadStoreUnit.vhd:64]
+INFO: [Synth 8-226] default block is never used [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/LoadStoreUnit.vhd:91]
+INFO: [Synth 8-226] default block is never used [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/LoadStoreUnit.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'LoadStoreUnit' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/LoadStoreUnit.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'MemDatos' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/MemData.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'MemDatos' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/MemData.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'MUX4_Reg' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/MUX4_Reg.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'MUX4_Reg' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/MUX4_Reg.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'Procesador_RV32E' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/Procesador_RV32E.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/VGA.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'AuxRAM' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/AuxRAM.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'AuxRAM' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/AuxRAM.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'BinToDec' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/BinToDec.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'BinToDec' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/BinToDec.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'DecToDigit' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/DecToDigit.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'DecToDigit' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/DecToDigit.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'TextRAM' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/TextRAM.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'TextRAM' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/TextRAM.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'ROM_Letter' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/ROM_Letter.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'ROM_Letter' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/ROM_Letter.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'AuxReg' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/AuxReg.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'AuxReg' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/AuxReg.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'vga_control' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/vga_control.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'vga_control' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/vga_control.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/new/VGA.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/user2/Music/PHR_012_PFAUART.xpr/PHR_012_PFA/PHR_012_PFA.srcs/sources_1/new/UART_RX.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/user2/Music/PHR_012_PFAUART.xpr/PHR_012_PFA/PHR_012_PFA.srcs/sources_1/new/UART_RX.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'bootloader' [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/user2/Music/PHR_012_PFAUART.xpr/PHR_012_PFA/PHR_012_PFA.srcs/sources_1/new/BOOTLOADER.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'bootloader' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/imports/user2/Music/PHR_012_PFAUART.xpr/PHR_012_PFA/PHR_012_PFA.srcs/sources_1/new/BOOTLOADER.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'Top_FPGA' (0#1) [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/TOP_FPGA.vhd:26]
+WARNING: [Synth 8-5837] Detected dual asynchronous set and preset for register temp_reg in module FF_D. This is not a recommended register style for Xilinx devices  [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/sources_1/new/FF_D.vhd:39]
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[14] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[13] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[12] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[11] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[10] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[9] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[8] driven by constant 0
+WARNING: [Synth 8-7129] Port direccion[31] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[30] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[29] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[28] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[27] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[26] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[25] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[24] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[23] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[22] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[21] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[20] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[19] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[18] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[17] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[16] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[15] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[14] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[13] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[12] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[1] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[0] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[31] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[30] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[29] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[28] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[27] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[26] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[25] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[24] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[23] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[22] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[21] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[20] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[19] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[18] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[17] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[16] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[15] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[14] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[13] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[12] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[1] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccionAux[0] in module AuxRAM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[31] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[30] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[29] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[28] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[27] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[26] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[25] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[24] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[23] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[22] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[21] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[20] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[19] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[18] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[17] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[16] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[15] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[14] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[13] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[12] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[1] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direccion[0] in module MemDatos is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[31] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[11] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[10] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[9] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[8] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[3] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[2] in module LoadStoreUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[31] in module Shift_Unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[30] in module Shift_Unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[29] in module Shift_Unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[28] in module Shift_Unit is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1478.410 ; gain = 760.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1478.410 ; gain = 760.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1478.410 ; gain = 760.602
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 1478.410 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'a'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'a'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'c'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'c'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'e'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'e'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'g'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'point'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'point'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SSEG_AN0'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SSEG_AN0'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SSEG_AN1'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SSEG_AN1'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SSEG_AN2'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SSEG_AN2'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SSEG_AN3'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SSEG_AN3'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:269]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:269]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:270]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:270]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'output'. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:297]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:297]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_FPGA_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_FPGA_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1557.867 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1557.867 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1557.867 ; gain = 840.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1557.867 ; gain = 840.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1557.867 ; gain = 840.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'byte_count_reg' in module 'bootloader'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+               start_bit |                               01 |                               01
+               data_bits |                               10 |                               10
+                stop_bit |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'User encoding' in module 'uart_rx'
+WARNING: [Synth 8-13157] FSM with state register 'state_reg' is not having reset. This may cause incorrect behavior. User should consider using FSM_SAFE_STATE attribute on the register
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                             0001 |                               00
+                 iSTATE1 |                             0010 |                               01
+                 iSTATE2 |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'byte_count_reg' using encoding 'one-hot' in module 'bootloader'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 1557.867 ; gain = 840.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 7     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   26 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 564   
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               26 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 519   
++---RAMs : 
+	              32K Bit	(1024 X 32 bit)          RAMs := 1     
+	               3K Bit	(768 X 5 bit)          RAMs := 1     
+	              512 Bit	(16 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 8     
+	   2 Input   32 Bit        Muxes := 24    
+	   3 Input   32 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 2     
+	   4 Input   14 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 493   
+	   3 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   7 Input    4 Bit        Muxes := 2     
+	  16 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 20    
+	   4 Input    1 Bit        Muxes := 8     
+	  11 Input    1 Bit        Muxes := 1     
+	  16 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 2     
+	  12 Input    1 Bit        Muxes := 1     
+	  13 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[14] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[13] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[12] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[11] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[10] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[9] driven by constant 0
+WARNING: [Synth 8-3917] design Top_FPGA has port leds[8] driven by constant 0
+INFO: [Synth 8-6851] RAM (RAM_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:38 ; elapsed = 00:02:43 . Memory (MB): peak = 1805.711 ; gain = 1087.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+----------------+---------------+----------------+
+|Module Name | RTL Object     | Depth x Width | Implemented As | 
++------------+----------------+---------------+----------------+
+|DecToDigit  | addressTextRAM | 32x8          | LUT            | 
+|ROM_Letter  | ROM[0][2]      | 32x15         | LUT            | 
+|ROM_Letter  | ROM[0][3]      | 32x14         | LUT            | 
+|ROM_Letter  | ROM[0][4]      | 32x16         | LUT            | 
+|ROM_Letter  | ROM[0][9]      | 32x17         | LUT            | 
+|ROM_Letter  | ROM[0][10]     | 32x16         | LUT            | 
+|ROM_Letter  | ROM[0][11]     | 32x17         | LUT            | 
+|ROM_Letter  | ROM[0][16]     | 32x16         | LUT            | 
+|ROM_Letter  | ROM[0][17]     | 32x14         | LUT            | 
+|DecToDigit  | addressTextRAM | 32x8          | LUT            | 
+|ROM_Letter  | ROM[0][2]      | 32x15         | LUT            | 
+|ROM_Letter  | ROM[0][3]      | 32x14         | LUT            | 
+|ROM_Letter  | ROM[0][4]      | 32x16         | LUT            | 
+|ROM_Letter  | ROM[0][9]      | 32x17         | LUT            | 
+|ROM_Letter  | ROM[0][10]     | 32x16         | LUT            | 
+|ROM_Letter  | ROM[0][11]     | 32x17         | LUT            | 
+|ROM_Letter  | ROM[0][16]     | 32x16         | LUT            | 
+|ROM_Letter  | ROM[0][17]     | 32x14         | LUT            | 
++------------+----------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------------+-----------------------------+-----------+----------------------+------------------+
+|Module Name            | RTL Object                  | Inference | Size (Depth x Width) | Primitives       | 
++-----------------------+-----------------------------+-----------+----------------------+------------------+
+|Inst_CPU/Inst_MemDatos | RAM_reg                     | Implied   | 1 K x 32             | RAM256X1S x 128  | 
+|Inst_CPU               | Inst_MemInstr/RAM_reg       | Implied   | 1 K x 32             | RAM256X1S x 128  | 
+|Top_FPGA               | VGA_use/AuxRAM_use/RAM_reg  | Implied   | 1 K x 32             | RAM128X1D x 256  | 
+|Top_FPGA               | VGA_use/TextRAM_use/mem_reg | Implied   | 1 K x 5              | RAM64M x 24      | 
+|Top_FPGA               | VGA_use/AuxReg_use/REGS_reg | Implied   | 16 x 32              | RAM32M x 6       | 
++-----------------------+-----------------------------+-----------+----------------------+------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:44 ; elapsed = 00:02:50 . Memory (MB): peak = 1805.711 ; gain = 1087.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:30 ; elapsed = 00:03:35 . Memory (MB): peak = 1983.953 ; gain = 1266.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-----------------------+-----------------------------+-----------+----------------------+------------------+
+|Module Name            | RTL Object                  | Inference | Size (Depth x Width) | Primitives       | 
++-----------------------+-----------------------------+-----------+----------------------+------------------+
+|Inst_CPU/Inst_MemDatos | RAM_reg                     | Implied   | 1 K x 32             | RAM256X1S x 128  | 
+|Inst_CPU               | Inst_MemInstr/RAM_reg       | Implied   | 1 K x 32             | RAM256X1S x 128  | 
+|Top_FPGA               | VGA_use/AuxRAM_use/RAM_reg  | Implied   | 1 K x 32             | RAM128X1D x 256  | 
+|Top_FPGA               | VGA_use/TextRAM_use/mem_reg | Implied   | 1 K x 5              | RAM64M x 24      | 
+|Top_FPGA               | VGA_use/AuxReg_use/REGS_reg | Implied   | 16 x 32              | RAM32M x 6       | 
++-----------------------+-----------------------------+-----------+----------------------+------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:35 ; elapsed = 00:03:41 . Memory (MB): peak = 2001.980 ; gain = 1284.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:40 ; elapsed = 00:03:46 . Memory (MB): peak = 2016.367 ; gain = 1298.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:40 ; elapsed = 00:03:46 . Memory (MB): peak = 2016.367 ; gain = 1298.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:41 ; elapsed = 00:03:46 . Memory (MB): peak = 2016.367 ; gain = 1298.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:41 ; elapsed = 00:03:46 . Memory (MB): peak = 2016.367 ; gain = 1298.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:41 ; elapsed = 00:03:47 . Memory (MB): peak = 2016.367 ; gain = 1298.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:41 ; elapsed = 00:03:47 . Memory (MB): peak = 2016.367 ; gain = 1298.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     3|
+|2     |CARRY4    |    86|
+|3     |LUT1      |    99|
+|4     |LUT2      |   219|
+|5     |LUT3      |   311|
+|6     |LUT4      |   364|
+|7     |LUT5      |   834|
+|8     |LUT6      |  1820|
+|9     |MUXF7     |   161|
+|10    |MUXF8     |    37|
+|11    |RAM128X1D |   256|
+|12    |RAM256X1S |   256|
+|13    |RAM32M    |     5|
+|14    |RAM32X1D  |     2|
+|15    |RAM64M    |    24|
+|16    |FDCE      |   554|
+|17    |FDRE      |   177|
+|18    |FDSE      |     1|
+|19    |IBUF      |    14|
+|20    |OBUF      |    30|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:41 ; elapsed = 00:03:47 . Memory (MB): peak = 2016.367 ; gain = 1298.559
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 129 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:21 ; elapsed = 00:03:41 . Memory (MB): peak = 2016.367 ; gain = 1219.102
+Synthesis Optimization Complete : Time (s): cpu = 00:03:41 ; elapsed = 00:03:47 . Memory (MB): peak = 2016.367 ; gain = 1298.559
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.158 . Memory (MB): peak = 2025.562 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 827 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2030.223 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 543 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 256 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 256 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 5 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 24 instances
+
+Synth Design complete | Checksum: 8947ec11
+INFO: [Common 17-83] Releasing license: Synthesis
+103 Infos, 144 Warnings, 27 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:49 ; elapsed = 00:04:10 . Memory (MB): peak = 2030.223 ; gain = 1498.789
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2030.223 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/iruiz/Downloads/CIM31-012_PFA/CIM31-012_PFA/CIM31-012_PFA.runs/synth_1/Top_FPGA.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_FPGA_utilization_synth.rpt -pb Top_FPGA_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 10 12:04:47 2026...
